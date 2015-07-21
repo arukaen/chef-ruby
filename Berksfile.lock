@@ -1,0 +1,11 @@
+DEPENDENCIES
+  ruby_basic
+    path: .
+    metadata: true
+
+GRAPH
+  apt (2.7.0)
+  build-essential (2.2.3)
+  ruby_basic (1.0.0)
+    apt (~> 2.7.0)
+    build-essential (~> 2.2.3)
