@@ -1,4 +1,4 @@
-default['ruby_basic']['install_method'] = 'source'
+default['ruby_basic']['install_method'] = 'package'
 default['ruby_basic']['system']['dependencies'] = case node['platform_family']
 when 'debian'
     %w(
