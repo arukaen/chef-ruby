@@ -1,4 +1,6 @@
 DEPENDENCIES
+  apt (~> 2.7.0)
+  build-essential (~> 2.2.3)
   ruby_basic
     path: .
     metadata: true

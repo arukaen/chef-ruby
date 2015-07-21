@@ -1,68 +1,51 @@
 ruby_basic Cookbook
 ===================
-TODO: Enter the cookbook description here.
 
-e.g.
-This cookbook makes your favorite breakfast sandwich.
+A [Chef](http://getchef.com/) cookbook for install ruby on a node.
 
 Requirements
 ------------
-TODO: List your cookbook requirements. Be sure to include any requirements this cookbook has on platforms, libraries, other cookbooks, packages, operating systems, etc.
 
-e.g.
-#### packages
-- `toaster` - ruby_basic needs toaster to brown your bagel.
+## Platforms
+
+* Ubuntu 
+* CentOS
+* Debian
+* Fedora
+
+## Cookbook Dependencies:
+
+This cookbook depends on:
+
+* [apt](https://supermarket.chef.io/cookbooks/apt) '~> 2.7.0'
+* [build-essential](https://supermarket.chef.io/cookbooks/build-essential) '~> 2.2.3'
 
 Attributes
-----------
-TODO: List your cookbook attributes here.
+==========
 
-e.g.
-#### ruby_basic::default
-<table>
-  <tr>
-    <th>Key</th>
-    <th>Type</th>
-    <th>Description</th>
-    <th>Default</th>
-  </tr>
-  <tr>
-    <td><tt>['ruby_basic']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
-  </tr>
-</table>
+* `node['ruby_basic']['install_method']` - The installation method for installing ruby on the node. Default is `package`
+* `node['ruby_basic']['ruby']['version']` - The version of Ruby you would like to install. Default is `2.1.5-p273`
 
-Usage
------
-#### ruby_basic::default
-TODO: Write usage instructions for each cookbook.
+Recipes
+=======
 
-e.g.
-Just include `ruby_basic` in your node's `run_list`:
+default
+-------
 
-```json
-{
-  "name":"my_node",
-  "run_list": [
-    "recipe[ruby_basic]"
-  ]
-}
-```
+The main recipe. Set your install_method which will call the appropriate recipe.
 
-Contributing
-------------
-TODO: (optional) If this is a public cookbook, detail the process for contributing. If this is a private cookbook, remove this section.
+package
+-------
 
-e.g.
-1. Fork the repository on Github
-2. Create a named feature branch (like `add_component_x`)
-3. Write your change
-4. Write tests for your change (if applicable)
-5. Run the tests, ensuring they all pass
-6. Submit a Pull Request using Github
+This recipe will install ruby via the package manager of the node.
 
-License and Authors
--------------------
-Authors: TODO: List authors
+source
+------
+
+This recipe will install the build-tools needed to install Ruby from source. 
+
+Authors
+=======
+
+* Author:: Cris Gallardo (c@cristhekid.com)
+
