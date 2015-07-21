@@ -11,7 +11,7 @@ end
 
 bash 'compile ruby source' do
     user 'root'
-    cwd "#{Chef::Config[:file_cache_path]}"
+    cwd Chef::Config[:file_cache_path]
     code <<-EOH
     tar --no-same-owner -zxf ruby-#{node['ruby_basic']['ruby']['version'][0..4]}.tar.gz
     (cd ruby-#{node['ruby_basic']['ruby']['version'][0..4]} && ./configure && make && make install)
