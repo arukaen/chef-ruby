@@ -23,7 +23,7 @@ This cookbook depends on:
 Attributes
 ==========
 
-* `node['ruby_basic']['install_method']` - The installation method for installing ruby on the node. Default is `package`
+* `node['ruby_basic']['install_method']` - The installation method for installing ruby on the node. Default is `source`
 * `node['ruby_basic']['ruby']['version']` - The version of Ruby you would like to install. Default is `2.1.5-p273`
 
 Recipes

@@ -11,7 +11,7 @@ end
 
 it 'should have default install_method as package' do
     chef_run.converge(described_recipe)
-    expect(chef_run.node['ruby_basic']['install_method']).to eq('package')
+    expect(chef_run.node['ruby_basic']['install_method']).to eq('source')
     end
 
 it 'should include the package recipe' do
